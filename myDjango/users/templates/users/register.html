@@ -1,0 +1,19 @@
+<div class="register-form">
+{% load static %}
+<form method="POST">
+    {% csrf_token %}
+    <!-- <fieldset>
+        <legend>Personal Information</legend>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required>
+        
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required>
+    </fieldset> -->
+    <fieldset>
+        <legend>Contact Information</legend>
+        {{ form }}
+    </fieldset>
+    <button type="submit">Register</button>
+</form>
+</div>

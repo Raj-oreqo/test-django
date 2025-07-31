@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="
+{% static 'styles.css' %}
+">
+
+<body>
+
+    <h1>Hello here is the list of products</h1>
+
+    {% for product in productList %}
+    <div class="fruit">
+        <h2>{{ product.name }}</h2>
+        <p>Price: {{ product.price }}</p>
+        <p>Description: {{ product.description }}</p>
+    </div>
+    {% endfor %}
+
+
+    {% for product in fruits %}
+    <div class="fruit">
+        <h2>{{ product }}</h2>
+        <!-- <p>Price: {{ product.price }}</p>
+        <p>Description: {{ product.description }}</p> -->
+    </div>
+    {% endfor %}
+
+</body>
+
+</html>
